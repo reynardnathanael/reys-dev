@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reys Dev</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="dark-color">
+        <nav class="nav-height">
+            <div id="nav-title">
+                <b style="color: white;">Reys Dev</b>
+                <div class="lines" onclick="showMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <ul id="nav-list" class="invisible">
+                <li><a class="hover-anim" href="#overview"><b>Overview</b></a></li>
+                <li><a class="hover-anim" href="#portfolio"><b>Portfolio</b></a></li>
+                <li><a class="hover-anim" href="#services"><b>Services</b></a></li>
+                <li><a class="hover-anim" href="#contact"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <!-- sidebar -->
+        <div id="sidebar" class="hide">
+            <div style="display: flex; justify-content: space-between;">
+                <h2>FAQ Session</h2>
+                <button id="close" onclick="hideShowSidebar()">&times;</button>
+            </div>
+            <div class="sidebar-container">
+                <button class="sidebar-collapse-box" onclick="collapse(this, 'sidebar')">How can I order ReysDev services?</button>
+                <div class="panel" style="color: black; border: 1px solid #FFC776;">
+                    <p style="margin: 8px 0 20px 0;">
+                        You can order ReysDev services by sending an email to <a href="mailto:reyssdev@gmail.com">reyssdev@gmail.com</a> with the subject 'Service Type - Business Name'. In the email, if you're ordering web/mobile app development services, provide a brief description of your business and the desired application concept. If you're ordering private coding lessons, explain your educational background and the specific topics you'd like to learn.
+                    </p>
+                </div>
+            </div>
+            <div class="sidebar-container">
+                <button class="sidebar-collapse-box" onclick="collapse(this, 'sidebar')">What are the prices of ReysDev's services?</button>
+                <div class="panel" style="color: black; border: 1px solid #FFC776;">
+                    <p style="margin: 8px 0 20px 0;">
+                        Each service has a different price, depending on the complexity of the application to be developed or the complexity of the material to be taught. However, one thing for sure, the price of ReysDev's services is very affordable.
+                </div>
+            </div>
+            <div class="sidebar-container">
+                <button class="sidebar-collapse-box" onclick="collapse(this, 'sidebar')">Why choose ReysDev?</button>
+                <div class="panel" style="color: black; border: 1px solid #FFC776;">
+                    <p style="margin: 8px 0 20px 0;">
+                        ReysDev provides the right services to grow your business with digitalization, and it is also suitable for those who want to learn programming. All services provided are guaranteed to be of the highest quality without causing disappointment. More complete information about my qualifications and portfolio can be seen on my LinkedIn, which can be accessed at the bottom of the website.
+                    </p>
+                </div>
+            </div>
+            <div class="sidebar-container">
+                <button class="sidebar-collapse-box" onclick="collapse(this, 'sidebar')">Can I order two services at the same time?</button>
+                <div class="panel" style="color: black; border: 1px solid #FFC776;">
+                    <p style="margin: 8px 0 20px 0;">
+                        YES, of course you can. However, there are times when this may not be possible, due to the number of orders I am currently working on. But don't worry, we can discuss it further to find the right solution.
+                    </p>
+                </div>
+            </div>
+            <div class="sidebar-container">
+                <button class="sidebar-collapse-box" onclick="collapse(this, 'sidebar')">Are you open to joining a project?</button>
+                <div class="panel" style="color: black; border: 1px solid #FFC776;">
+                    <p style="margin: 8px 0 20px 0;">
+                        SURE! I don't limit myself to just accepting orders, but I am also open to joining various IT-related projects. If you want to invite me to join, you can contact me via Linkedin or Email to discuss it further.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="faq">
+            <div id="faq-container">
+                <button id="faq-button" onclick="hideShowSidebar()" title="FAQ"><img src="img/question-solid.svg" alt="faq"></button>
+            </div>
+        </div>
+
+        <!-- start content -->
+        <section id="overview">
+            <div id="left-overview">
+                <h1>Hello!! I'm Reynard</h1>
+                <p id="title">~ Software Engineer & Developer ~</p>
+                <div class="container">
+                    <button class="collapse-box dark-color" onclick="collapse(this)">More About Me</button>
+                    <div class="panel dark-color">
+                        <p>
+                            Bachelor of Computing with 3.979/4.00 GPA (Summa Cumlaude). I have hands-on experience in developing various applications, particularly web-based and business-oriented ones, also proficient in SQL database implementation and native & hybrid mobile programming. I am open to job opportunities and projects related to IT. Feel free to contact me anytime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <aside id="right-overview">
+                <img src="img/profile.JPG" alt="">
+            </aside>
+        </section>
+        <br>
+        <section id="portfolio">
+            <small class="section-sub" style="color: #FFC776;">P O R T F O L I O</small>
+            <h1 class="section-title" style="color: #FFC776;">My Portfolio</h1>
+            <div id="portfolio-container">
+                <div class="btn-container" style="justify-content: start">
+                    <button onclick="swipeLeft()" class="btn-carousel" style="padding-right: 10px;">&#128896;</button>
+                </div>
+                <div id="img-container">
+                    <img src="img/portfolio-1.jpg" alt="">
+                    <div id="dots">
+                        <div class="dot" id="1" style="background-color: #FFC776;"></div>
+                        <div class="dot" id="2"></div>
+                        <div class="dot" id="3"></div>
+                        <div class="dot" id="4"></div>
+                    </div>
+                </div>
+                <div class="btn-container" style="justify-content: end;">
+                    <button onclick="swipeRight()" class="btn-carousel" style="padding-left: 10px;">&#128898;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div id="services-header">
+                <small class="section-sub">S E R V I C E S</small>
+                <h1 class="section-title">Services Provided</h1>
+            </div>
+            <div id="services-container">
+                <div class="service-container">
+                    <img src="img/website.png" alt="">
+                    <article class="service-content">
+                        <h2>Web App Development</h2>
+                        <p>Web applications are a highly effective tool for growing businesses, both for managing internal data and publishing information to the public. A responsive web design allows users to access it using any type of gadget.</p>
+                    </article>
+                </div>
+                <div class="service-container">
+                    <img src="img/mobile.png" alt="">
+                    <article class="service-content">
+                        <h2>Mobile App Development</h2>
+                        <p>
+                            Mobile applications are highly practical for processing and recording all business administrative tasks on a smartphone. There are 2 types of mobile app development offered: Android and Hybrid.
+                        </p>
+                    </article>
+                </div>
+                <div class="service-container">
+                    <img src="img/tutor.png" alt="">
+                    <article class="service-content">
+                        <h2>Private Coding Lessons</h2>
+                        <p>
+                            This service is perfect for those who are struggling with IT studies or for those who want to learn about coding. All materials will be delivered in a comprehensive and sequential manner, starting from the concepts to the implementations.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div id="social-media">
+            <button class="circle" onclick="redirect('linkedin')"><img src="img/linkedin.svg" alt=""></button>
+            <button class="circle" onclick="redirect('github')"><img src="img/github.svg" alt=""></button>
+            <button class="circle" onclick="redirect('instagram')"><img src="img/instagram.svg" alt=""></button>
+            <button class="circle" onclick="redirect('gmail')"><img src="img/envelope-regular.svg" alt=""></button>
+        </div>
+        <div id="copyright">
+            <div style="color: white; margin-bottom: 6px;">Copyright ©2024; Developed by <b>Reynard</b></div>
+            <small style="color: white;">❗❗ This website was built entirely from scratch using only HTML, CSS, and JavaScript, without using any templates, frameworks, or libraries. ❗❗</small>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
